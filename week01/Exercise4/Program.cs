@@ -21,7 +21,7 @@ class Program
             }
         }
 
-        // Calculations ---
+        // Calculations 
         // Start with the first number in the list
         int sum = 0;
         int max = numbers[0]; 
