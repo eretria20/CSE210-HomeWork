@@ -9,11 +9,30 @@ public class Reference
 
     public Reference(string book, int chapter, int verse)
     {
-        
+      _book = book;
+      _chapter = chapter;
+      _verse = verse;
+      _endVerse = 0;
     }
-
+    // Overloaded constructor to handle end verse
+    public Reference(string book, int chapter, int verse, int endVerse)
+    {
+      _book = book;
+      _chapter = chapter;
+      _verse = verse;
+      _endVerse = endVerse;
+    }
+// Method to get the display text for the reference
     public string GetDisplayText()
     {
-        return "";
+      if (_endVerse > 0)
+        {
+            return $"{_book} {_chapter}:{_verse}-{_endVerse}";
+        }
+        else
+        {
+            return $"{_book} {_chapter}:{_verse}";
+        }
+        
     }
 }
